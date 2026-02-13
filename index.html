@@ -276,8 +276,10 @@ const noMessages = [
 
 let lastMessageIndex = -1;
 
-/* No button playful move */
-noBtn.addEventListener("mouseenter", () => {
+/* No button playful move (Click for mobile compatibility) */
+noBtn.addEventListener("click", (e) => {
+
+    e.preventDefault();
 
     const container = document.querySelector(".buttons");
 
